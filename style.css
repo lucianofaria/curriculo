@@ -1,0 +1,140 @@
+/* Folha de Estilo */
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+h1{
+    color: #003366;
+    margin: 0;
+    font-weight: 700;
+    font-size: 64px;
+}
+
+h2{
+    margin: 0;
+    font-size: 32px;
+    color: #333333;
+}
+p{
+    font-size: 20px;
+    color: #666666;
+}
+
+.perfil{
+    margin-bottom: 65px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.nav{
+    background-color: #003366;
+    /*width: 280px;*/
+    height: 100vh;
+    text-align: center;
+
+    padding-left: 70px;
+    padding-right: 70px;
+
+    display: flex;
+    align-items: center;
+}
+
+.content-nav a{
+    text-decoration: none;    
+    color: white;
+    display: block;
+    margin-bottom: 33px;
+}
+
+.content-nav a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+
+.social{
+   display: flex; 
+   column-gap: 16px;
+   margin-top: 65px;
+}
+
+.content{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* MEDIA QUERIES
+    São condicionais baseadas principalmente no tamanho das  telas
+*/
+
+@media (max-width: 767px ) {
+
+    h1{
+        font-size: 36px;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .content{
+        margin-top: 90px;
+    }
+
+    .nav{
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        box-sizing: border-box; /* Faz com que o padding não ultrapasse o limite*/
+    }
+
+    .content-nav{
+        display: flex;
+        flex-wrap: wrap; /* permite multiplas linhas*/
+        width: 100%;
+        justify-content: space-between; /* colocar espaços vazios entre os filhos*/
+    }
+
+    .content-nav a{
+        margin-bottom: 0;
+
+    }
+
+    .perfil{
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        order: 1;
+    }
+
+    .social{        
+        margin: 0;
+        order: 2;
+    }
+
+    .menu{
+        order: 3;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 32px;
+    }
+
+    .social img {
+        width: 20px;
+    }
+}
